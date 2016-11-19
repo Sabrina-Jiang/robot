@@ -42,7 +42,7 @@ namespace URWPGSim2D.Strategy
         /// 获取当前仿真使命（比赛项目）当前队伍所有仿真机器鱼的决策数据构成的数组
         /// </summary>
         /// <param name="mission">服务端当前运行着的仿真使命Mission对象</param>
-        /// <param name="teamId">当前队伍在服务端运行着的仿真使命中所处的编号 
+        /// <param name="teamId">当前队伍在服务端运行着的仿真使命中所处的编号
         /// 用于作为索引访问Mission对象的TeamsRef队伍列表中代表当前队伍的元素</param>
         /// <returns>当前队伍所有仿真机器鱼的决策数据构成的Decision数组对象</returns>
         #region
@@ -185,7 +185,7 @@ namespace URWPGSim2D.Strategy
 
         }
 
-        //先求最佳球 得到最近球门 
+        //先求最佳球 得到最近球门
         public void GetBestGoalNo(int fishNo, Mission mission, int teamId) // 没有ballNo的定义
         {
             this.GetBestRedBallNo(0, mission, teamId); // 先得到最近红球
@@ -218,8 +218,8 @@ namespace URWPGSim2D.Strategy
 
 
 
-     
-        // 固定球 得到最近球门 
+
+        // 固定球 得到最近球门
         public void GetBestGoalNo(int fishNo, Mission mission, int teamId, int ballNo)
         {
             double num = 100000.0;
@@ -296,7 +296,7 @@ namespace URWPGSim2D.Strategy
                 bestgoal = 2;
             }
             /* if( bestgoal == 3 ){ // 控制球不进3号球门
-                 bestgoal = 2; 
+                 bestgoal = 2;
              }*/
             double ball_x = mission.EnvRef.Balls[bestball].PositionMm.X; // 水球位置X坐标
             double ball_z = mission.EnvRef.Balls[bestball].PositionMm.Z; // 水球位置Z坐标
